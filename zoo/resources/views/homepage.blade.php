@@ -34,15 +34,28 @@
 
         {{-- dump and die --}}
         {{-- dd(get_defined_vars()) --}}
+ 
         
+        <h4>Casy verejneho krmeni</h4>
       <ul>
         @foreach($casyKrmeni AS $cas)
             <li>{{ $cas }}</li>
         @endforeach
       </ul>
-        
-        
 
+      <table border="1px">
+        <tr>
+            <th>Jmeno</th>
+            <th>Popis</th>
+        </tr>
+        @foreach($poleZviratek AS $zvire)
+            <tr>
+                <td>{{ $zvire->jmeno }}</td>
+                <td>{{ $zvire->popis }}</td>
+            </tr>
+        @endforeach
+        </table>
+        
     </div>
 </body>
 </html>
